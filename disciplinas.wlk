@@ -25,7 +25,7 @@ object judo {
  }
 
 object hockey {
-    method presupuestoDisciplina(unAtleta)= 
+    method presupuestoDisciplina(unAtleta)= unAtleta.edad() * self.entrenadores()
 
-    method entrenadores() = 
+    method entrenadores() = 2
 }

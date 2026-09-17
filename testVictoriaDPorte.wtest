@@ -2,3 +2,39 @@ import atletas.*
 import elementos.*
 import disciplinas.*
 
+describe "test ejercicio Victoria D Porte" {
+    test "1 Victoria mide 150, practica judo y tiene un judogi"{
+    victoria.cambiarAltura(150)
+    victoria.cambiarDisciplina(judo)
+    victoria.cambiarElemento(judogi)
+    assert.equals(150,victoria.altura())
+    assert.equals(judo,victoria.disciplinaActual())
+    assert.equals(judogi,victoria.elementoActual()) 
+    }
+
+    test "2 Victoria mide 210,practica tenis, tiene una raqueta y 2 entrenadores"{
+    victoria.cambiarAltura(210)
+    victoria.cambiarDisciplina(tenis)
+    victoria.cambiarElemento(raqueta)
+    tenis.cambiarEntrenadores(2)
+    assert.equals(210,victoria.altura())
+    assert.equals(tenis,victoria.disciplinaActual())
+    assert.equals(raqueta,victoria.elementoActual())
+    assert.equals(2,tenis.entrenadores())
+    }
+
+    test "3 victoria practica judo, con raqueta"{
+        victoria .cambiarDisciplina(judo)
+        victoria .cambiarElemento(raqueta)
+        assert.equals(judo,victoria.disciplinaActual())
+        assert.equals(raqueta,victoria.elementoActual())
+    }
+
+    test "4 victoria practica hockey, con judogi"{
+        victoria .cambiarDisciplina(hockey)
+        victoria .cambiarElemento(judogi)
+        assert.equals(hockey,victoria.disciplinaActual())
+        assert.equals(judogi,victoria.elementoActual())
+    }
+}
+    

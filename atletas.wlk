@@ -9,6 +9,8 @@ object victoria {
  
   method edad() = edad
   method altura() = altura
+  method disciplinaActual() = disciplina
+  method elementoActual() = elemento
 
   method presupuestoPropio() = (disciplina.entrenadores() * comiteOlimpico.valorPorEntrenador()) + elemento.costoElemento(self)
   method presupuesto() = self.presupuestoPropio() + disciplina.presupuestoDisciplina()
